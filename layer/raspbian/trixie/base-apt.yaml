@@ -18,6 +18,7 @@ mmdebstrap:
   variant: apt
   mirrors:
     - ${IGTOP}/templates/debian/apt/raspbian-trixie.sources
+    - ${IGTOP}/templates/debian/apt/rpi-trixie.sources
   aptopts:
     - APT::Install-Suggests "false"
     - APT::Install-Recommends "false"
@@ -33,6 +34,7 @@ mmdebstrap:
     - path-exclude=/usr/share/lintian/*
   packages:
     - raspbian-archive-keyring
+    - raspberrypi-archive-keyring
   essential-hooks:
     - echo tzdata tzdata/Areas select "${IGconf_locale_timezone%%/*}"
         | chroot $1 debconf-set-selections

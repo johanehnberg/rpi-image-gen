@@ -1,0 +1,14 @@
+device:
+  layer: rpi2
+
+image:
+  layer: image-rpios
+  boot_part_size: 128M
+  root_part_size: 1536M
+  name: armhf-rpi2
+
+layer:
+  base: raspbian-trixie-armhf
+
+#kernel:
+#  layer: rpi-linux-v7
